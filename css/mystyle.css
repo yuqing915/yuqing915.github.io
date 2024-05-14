@@ -1,6 +1,7 @@
 body{
-background-color: #ffffff;
+background-color: white;
+background-image:url(file:///Users/sunyuqing/Downloads/binding-dark.png)
 }
 h1{
-color: black !important;
+color: black;
 }
