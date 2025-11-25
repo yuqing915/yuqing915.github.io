@@ -1,7 +1,46 @@
 body{
-background-color: white;
-background-image:url(file:///Users/sunyuqing/Downloads/binding-dark.png)
-}
-h1{
-color: black;
-}
+    background-color: white;
+    background-image:url(file:///Users/sunyuqing/Downloads/binding-dark.png)
+    }
+    h1{
+    color: black;
+    }
+    /* 將導航欄的背景顏色覆寫為您指定的深灰色 #53565b */
+    .bg-primary {
+        background-color: #aeaeae !important; 
+    }
+    
+    /* 確保側邊欄固定在頂部時也使用這個顏色 */
+    #sideNav {
+        background-color: #aeaeae !important;
+    }
+    
+    /* 由於背景是深色，我們不需要修改 #sideNav 的文字顏色，Bootstrap 的 navbar-dark 會將文字設為白色。 */
+    /* -------------------------------------- */
+    /* 新增：側拍作品集橫向滾動樣式 */
+    /* -------------------------------------- */
+    
+    /* 確保容器可以橫向滾動 */
+    .horizontal-scroll-container {
+        display: flex; /* 使用 Flexbox 讓內容排成一行 */
+        flex-wrap: nowrap; /* 確保圖片不會換行 */
+        overflow-x: scroll; /* 允許水平方向滾動 */
+        padding-bottom: 15px; /* 為滾動條留出空間 */
+        gap: 1rem; /* 圖片之間的間距 */
+    }
+    
+    /* 定義橫向滾動區塊內的圖片樣式 */
+    .side-shot-item {
+        flex: 0 0 auto; /* 阻止圖片縮小，保持其原始或設定的寬度 */
+        width: 300px; /* 範例：設定每張圖片的寬度，您可以調整 */
+        height: 200px; /* 範例：設定每張圖片的高度，您可以調整 */
+        overflow: hidden;
+        border-radius: 8px; /* 輕微圓角 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    }
+    
+    .side-shot-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 確保圖片填滿容器而不變形 */
+    }
