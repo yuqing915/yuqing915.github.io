@@ -1,427 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="履歷" />
-        <meta name="author" content="孫于晴" />
-        <title>孫于晴的履歷</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/profile.jpg"/>
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="./css/mystyle.css" rel="stylesheet" />
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>孫于晴的履歷</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Kanit:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --theme-color: #7ea2ca; 
+            --dark-gray: #212529;   
+            --bg-color: #abb6c5;    
+            --white: #ffffff;
+            --nav-height: 80px;
+        }
+
+        html { 
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--nav-height) + 30px); 
+        }
+
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--dark-gray); }
+
+        #topNav { 
+            height: var(--nav-height); 
+            background-color: var(--dark-gray) !important; 
+            border-bottom: 2px solid var(--theme-color); 
+            z-index: 1050; 
+        }
+
+        .container-nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .navbar-brand-left { 
+            font-family: 'Kanit', sans-serif; 
+            font-weight: 800;
+            font-size: 2rem; 
+            color: var(--theme-color) !important; 
+            letter-spacing: 1px;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+
+        .nav-menu-group {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu-group .nav-link {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7) !important;
+            margin-right: 25px;
+            text-decoration: none;
+        }
+
+        .nav-menu-group .nav-link:hover { color: var(--theme-color) !important; }
+
+        .main-card {
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 60px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+
+        .profile-img { 
+            width: 200px; height: 200px; object-fit: cover; border-radius: 50%; 
+            border: 6px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            margin-bottom: 2rem; 
+        }
+
+        .hero-name { font-weight: 900; font-size: 3.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
         
-    </head>
-    <body id="page-top" class="wall-color wall-image" style="background-image: url('assets/img/DSC03408.JPG'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">孫于晴</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#favorite">Favorite</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container-fluid p-0">
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-3">
-                        <strong><span class=" font-serif">孫于晴</span></strong>
-                        <span class="pink font-cinzel">SUN-YU-QING</span>
-                      </h1>
-                      <div class="subheading mb-5 center">
-                        <span class="font-japanese"> <br>台北市文山區木柵路一段17巷1號</span>
-                        <P></P>
-                    <a href="a112070070@mail.shu.edu.tw" class="light-pink hover-black font-handwriting"><span style="text-transform:lowercase;">a112070070@mail.shu.edu.tw</span></a>
-                </div>
-                    <p class="lead mb-3">21歲台北人，生日9月15日，處女座。</p>
-                    <p class="lead mb-3">目前就讀世新大學資訊傳播學系，熱愛生活，喜歡戶外活動、電影和音樂。</p>
-                    <p class="lead mb-3">I'm 21-year-old in Taipei, birthday September 15, Virgo.</p>
-                    <p class="lead mb-3">I studying in the Department of Information and Communication at Shih Hsin University, and I love life, outdoor activities, movies, and music.</p>
-                    <p></p>
-                    <div class="social-icons center">
-                        <a class="social-icon" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i>
-                        <a class="social-icon" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-icon" href="https://github.com/yuqing915/yuqing915.github.io" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">世新大學傳播技能展
-                                <a href="https://www.youtube.com/watch?v=twk7KZ_uX48&list=PLrzElZNovuZsU0aicCeryCNR_ViXn4hsB&index=27"><i class="fa-solid fa-magnifying-glass" style="color: #b51a00;"></i></a> 
-                            </h3>
-                            <div class="subheading mb-3">後製組</div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                           <h3 class="mb-0">insta mini Evo 廣告-青春定格</h3>
-                           <div class="subheading mb-3">製片</div>
-                        </div>
-                   </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                         <div class="flex-grow-1">
-                            <h3 class="mb-0">「沒有名字的地方」MV拍攝
-                                <a href="https://youtu.be/AUoUinoRZGE"><i class="fa-solid fa-magnifying-glass" style="color: #b51a00;"></i></a> 
-                            </h3>
-                            <div class="subheading mb-3">剪輯</div> 
-                         </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                         <div class="flex-grow-1">
-                            <h3 class="mb-0">全國運動會-韻律體操</h3>
-                            <div class="subheading mb-3">攝影</div>
-                         </div>
-                    </div>
-            </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">台北市立福林國民小學
-                            <a href="https://www.flps.tp.edu.tw/nss/p/index"><i class="fa-solid fa-school"></i></a> 
-                            </h3> 
-                            <div class="subheading mb-3">Fulin Elementary School</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2011- June 2017 </span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">台北市立士林國民中學
-                            <a href="https://www.sljh.tp.edu.tw/nss/p/index"><i class="fa-solid fa-school"></i></a> 
-                            </h3>
-                            <div class="subheading mb-3">Shilin Junior High School</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2017 - June 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">台北市立復興高級中學
-                            <a href="https://www.fhsh.tp.edu.tw"><i class="fa-solid fa-school"></i></a> 
-                            </h3>
-                            <div class="subheading mb-3">Taipei Municipal Fuxing Senior High School</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2020 - June 2023</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">世新大學資訊傳播學系
-                            <a href="https://ics.wp.shu.edu.tw"><i class="fa-solid fa-school"></i></a> 
-                            </h3>
-                            <div class="subheading mb-3">SHU ICS</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2023 - Present </span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    
-                    <div class="subheading mb-3">文書處理</div>
-                    <p class="mb-4">
-                        <span class="badge bg-primary me-2 p-2">PowerPoint</span>
-                        <span class="badge bg-primary me-2 p-2">Word</span>
-                        <span class="badge bg-primary me-2 p-2">Canva</span>
-                        <span class="badge bg-primary me-2 p-2">Excel</span>
-                    </p>
+        .hero-name span { 
+            display: block; 
+            margin-top: 10px; 
+            font-family: 'Kanit', sans-serif; 
+            font-weight: 900;
+            -webkit-text-stroke: 1.5px var(--dark-gray);
+            color: transparent; 
+            font-size: 4.8rem;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
 
-                    <div class="subheading mb-3">影音製作</div>
-                    <p class="mb-4">
-                        <span class="badge bg-primary me-2 p-2">Premiere Pro </span>
-                        <span class="badge bg-primary me-2 p-2">Photoshop</span>
-                        <span class="badge bg-primary me-2 p-2">Illustrator</span>
-                    </p>
-                    <div class="subheading mb-3">技術與協作</div>
-                    <p class="mb-4">
-                        <span class="badge bg-primary me-2 p-2">GitHub</span>
-                    </p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
+        .about-content-box {
+            background-color: #f8faff;
+            border-left: 4px solid var(--theme-color);
+            padding: 25px;
+            border-radius: 0 15px 15px 0;
+            margin-top: 20px;
+        }
 
-                    
-                    <p class="mb-5">
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">旅行</span>
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">露營</span>
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">看電影</span>
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">聽音樂 </span>
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">游泳 </span>
-                        <span class="badge bg-primary text-dark me-2 p-2 fs-5">吃美食</span>
-                    </p>
-                    
-                    <div class="container px-0">
-                     <div class="row gx-4 gx-lg-5">
+        .about-lead {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .stat-highlight {
+            color: var(--theme-color);
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .contact-info-simple { margin: 1.5rem 0; font-weight: 700; display: flex; flex-wrap: wrap; gap: 25px; }
+        .contact-item { display: flex; align-items: center; font-size: 0.95rem; }
+        .contact-icon { color: var(--theme-color); font-size: 1.1rem; margin-right: 8px; }
+
+        .section-title { 
+            font-weight: 900; 
+            font-size: 2.2rem; 
+            margin-bottom: 2.5rem; 
+            display: inline-block; 
+            border-bottom: 8px solid var(--theme-color); 
+            line-height: 0.7; 
+        }
+
+        .section-block {
+            padding-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .content-box { border-left: 5px solid var(--theme-color); padding-left: 1.5rem; margin-bottom: 3rem; }
+        .content-box h3 { font-weight: 900; font-size: 1.5rem; margin-bottom: 0.8rem; }
+        
+        .skill-tool-box {
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-tag { 
+            border: 2px solid var(--theme-color); 
+            color: var(--theme-color); 
+            padding: 10px 25px; 
+            font-weight: 800; 
+            font-size: 1rem; 
+            border-radius: 12px; 
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--theme-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .work-photo-container {
+            margin-top: 15px; overflow: hidden; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .work-photo-img { width: 100%; height: auto; display: block; }
+
+        /* 作品集樣式 */
+        .portfolio-list-item { padding: 25px 0; border-bottom: 1px solid #eee; transition: 0.3s; text-decoration: none; color: inherit; display: block; }
+        .portfolio-list-item:hover { background-color: #fcfcfc; padding-left: 15px; border-left: 8px solid var(--theme-color); }
+        .work-title { font-weight: 900; font-size: 1.4rem; }
+        .work-category { font-family: 'Kanit', sans-serif; font-weight: 700; color: #bbb; font-size: 1.1rem; margin-right: 15px; }
+
+        /* 平面作品大卡片網格 */
+        .design-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* 側拍作品小卡片網格 */
+        .behind-scenes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .design-image-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            border: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .design-image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(126, 162, 202, 0.2);
+        }
+
+        /* 平面作品大圖樣式 */
+        .design-card-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 側拍作品小圖樣式 */
+        .bts-img {
+            width: 100%;
+            height: 200px; /* 固定較小的高度 */
+            object-fit: cover; 
+            display: block;
+        }
+
+        .portfolio-sub-title {
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--theme-color);
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        @media (max-width: 992px) {
+            .behind-scenes-grid { grid-template-columns: repeat(2, 1fr); }
+            .bts-img { height: 150px; }
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <nav id="topNav" class="sticky-top">
+        <div class="container-nav">
+            <a class="navbar-brand-left" href="#page-top">SUN YU QING</a>
+            <ul class="nav-menu-group">
+                <li><a class="nav-link" href="#about">關於我</a></li>
+                <li><a class="nav-link" href="#learning">學習經驗</a></li>
+                <li><a class="nav-link" href="#skills">專業技能</a></li>
+                <li><a class="nav-link" href="#portfolio">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-card">
+            <section id="about" class="section-block">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center">
+                        <img src="assets/img/profile.jpg" class="profile-img img-fluid" alt="孫于晴">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1 class="hero-name">孫于晴 <span>SUN YU QING</span></h1>
+                        <div class="contact-info-simple">
+                            <div class="contact-item"><span class="contact-icon">✉️</span><span>shinysun0915@gmail.com</span></div>
+                            <div class="contact-item"><span class="contact-icon">📞</span><span>0978-416-139</span></div>
+                        </div>
                         
-                        <div class="col-6 col-md-3 mb-4">
-                            <div class="card h-100 shadow">
-                                <img class="card-img-top img-fluid" src="assets/img/profile1.jpg" alt="旅遊生活照 1" style="object-fit: cover; height: 100%;">
-                            </div>
+                        <div class="about-content-box">
+                            <p class="about-lead">
+                                我目前就讀於<strong>世新大學資訊傳播學系三年級</strong>，熱衷於體育賽事，對棒球規則及賽事節奏擁有敏銳洞察力，擅長將長篇賽事素材濃縮為吸引觀眾的精華影片，並完整參與企劃、拍攝到後製剪輯。
+                            </p>
+                            <p class="about-lead mb-0">
+                                此外，我也同時具備敏銳的社群觀察力，曾經產出單支 <span class="stat-highlight">8.5 萬次觀看</span> 的 Reels 與 <span class="stat-highlight">7,000 次瀏覽</span> 的 Threads，能夠產出符合演算法且引起共鳴的影片。
+                            </p>
                         </div>
-                        <div class="col-6 col-md-3 mb-4">
-                            <div class="card h-100 shadow">
-                                <img class="card-img-top img-fluid" src="assets/img/IMG_8744.JPG" alt="旅遊生活照 2" style="object-fit: cover; height: 100%;">
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-4">
-                            <div class="card h-100 shadow">
-                                <img class="card-img-top img-fluid" src="assets/img/IMG_5884 2.jpg" alt="旅遊生活照 3" style="object-fit: cover; height: 100%;">
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 mb-4">
-                            <div class="card h-100 shadow">
-                                <img class="card-img-top img-fluid" src="assets/img/IMG_D352185ED1DE-1.jpeg" alt="旅遊生活照 4" style="object-fit: cover; height: 100%;">
-                            </div>
-                        </div>
-                        
-                     </div>
                     </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <section class="resume-section" id="favorite">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Favorite</h2>
+
+            <section id="learning" class="section-block">
+                <h2 class="section-title">學習經驗</h2>
+                <div class="content-box">
+                    <h3>1. 傳播技能展 - 後製組組長</h3>
+                    <p>帶領團隊完成影片，負責管理進度及影片粗剪，熟練運用 Premiere Pro 進行剪輯，並能掌握影片的敘事節奏。</p>
+                </div>
+                <div class="content-box">
+                    <h3>2. 直播節目製作 / 精華剪輯</h3>
+                    <p>協助節目企劃以及負責剪輯直播精華，單支影片累計觀看近3000人次。</p>
                     <div class="row">
-
-                        <div class="col-lg-6 mb-4">
-                            <div class="card h-100 shadow">
-                                <div class="card-header bg-primary text-white">
-                                    <h3 class="mb-0 fs-4">電影 🎬</h3>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        《不可能的任務：全面瓦解》
-                                        <span class="float-end text-muted">2023 / 英語</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        《屍速列車》
-                                        <span class="float-end text-muted">2016 / 韓語</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        《關於我和鬼變成家人的那件事》
-                                        <span class="float-end text-muted">2023 / 中文</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        《黑豹》
-                                        <span class="float-end text-muted">2018 / 英語</span>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-2">
+                            <div class="work-photo-container">
+                                <img src="assets/img/IMG_3971.jpg" alt="工作照" class="work-photo-img" onerror="this.src='https://via.placeholder.com/400x300?text=Work+Photo';">
                             </div>
                         </div>
-
-                        <div class="col-lg-6 mb-4">
-                            <div class="card h-100 shadow">
-                                <div class="card-header bg-primary text-white">
-                                    <h3 class="mb-0 fs-4">音樂 🎶</h3>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        離開的一路上
-                                        <span class="float-end text-muted">理想混蛋</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        for lovers who hesitate
-                                        <span class="float-end text-muted">JANNABI</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        Summer rain
-                                        <span class="float-end text-muted">Sam Kim</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        the 1
-                                        <span class="float-end text-muted">Taylor Swift</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        popcorn
-                                        <span class="float-end text-muted">D.O.</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        Amusement park
-                                        <span class="float-end text-muted">Baekhyun</span>
-                                    </li>
-                                </ul>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3>3. 「沒有名字的地方」MV 後製 / 側拍</h3>
+                    <p>負責素材整理與初步剪輯，並依照導演需求完成剪輯，同時也擔任側拍紀錄拍攝現場的幕後花絮。</p>
+                </div>
+                <div class="content-box">
+                    <h3>4. 全運會競技體操攝影</h3>
+                    <p>擔任現場轉播攝影，能夠快速捕捉運動員完成高難度動作時的瞬間。</p>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="work-photo-container">
+                                <img src="assets/img/IMG_8293.png" alt="全運會攝影工作照" class="work-photo-img" onerror="this.src='https://via.placeholder.com/400x300?text=Work+Photo';">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-             <section class="resume-section" id="portfolio">
-                <div class="resume-section-content">
-                    <h2 class="mb-3">Portfolio</h2>
-                    <div id="graph_setOne" class="collpse show" data-parent="#graph_set" style>
-                        <div class="card-body">
-                          <div class="row text-center text-ig-left">
-                            <div class="col-md-4 mb-4">
-                              <div class="card border-0 shadow">
-                                <img class="card-img-top"src="assets/img/logo.PNG">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title mb-0">數位影像處理</h5>
-                                  <div class="card-text-text-black-50">
-                                  個人logo
-                                  </div>
-                                </div>
-                            </div>
-                           </div>
-                             <div class="col-md-4 mb-4">
-                                <div class="card border-0 shadow">
-                                <img class="card-img-top"src="assets/img/海報.png">
-                                     <div class="card-body text-center">
-                                     <h5 class="card-title mb-0">數位影像處理</h5>
-                                     <div class="card-text-text-black-50">
-                                        2023聖誕節海報
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
-                             
-                             <div class="col-md-4 mb-4">
-                                 <div class="card border-0 shadow">
-                                  <img class="card-img-top"src="assets/img/名片.png">
-                                      <div class="card-body text-center">
-                                     <h5 class="card-title mb-0">數位影像處理</h5>
-                                    <div class="card-text-text-black-50">
-                                        個人名片
-                                         </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                                 
-                                 <div class="col-md-4 mb-4">
-                                    <div class="card border-0 shadow">
-                                        <img class="card-img-top"src="assets/img/8.png">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title mb-0">ps 作品</h5>
-                                            <div class="card-text-text-black-50">“迷茫“海報 </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4 mb-4">
-                                     <div class="card border-0 shadow">
-                                        <img class="card-img-top"src="assets/img/9.png">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title mb-0">ps 作品</h5>
-                                            <div class="card-text-text-black-50">“迷茫“海報 </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4 mb-4">
-                                     <div class="card border-0 shadow">
-                                        <img class="card-img-top"src="assets/img/10.png">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title mb-0">ps 作品</h5>
-                                            <div class="card-text-text-black-50">“迷茫“海報 </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                                 
-                                 <p></p>
-                                 <p></p>
-                                 
-                             <div class="col-md-6 col-lg-4 mb-4">
-                                                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                            <div class="portfolio-item-caption-content text-center text-white"></div>
-                                                        </div>
-                                                    <img class="img-fluid" src="assets/img/podcast.png" alt="探討podcast" />
-                                                </div>
-                                                    <center>
-                                                    <a class=expedu_icon href="file:///Users/sunyuqing/Downloads/資訊傳播概論期末報告.pdf">探討podcast</a>
-                                                    </center>
-                                            <p></p>
-                                            </div>
-                              <div class="col-md-6 col-lg-4 mb-4">
-                                                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                                                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                        <div class="portfolio-item-caption-content text-center text-white"></div>
-                                                    </div>
-                                                <img class="img-fluid" src="assets/img/截圖 2024-05-14 下午2.01.48.png" alt="HAPPY DADDY品牌行銷" />
-                                            </div>
-                                                <center>
-                                                <a class=expedu_icon href="file:///Users/sunyuqing/Downloads/資訊行銷期末報告.pdf">HAPPY DADDY品牌行銷</a>
-                                                </center>
-                                                <p></p>
-                                            </div>
-                             <div class="col-md-6 col-lg-4 mb-4">
-                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                <div class="portfolio-item-caption-content text-center text-white"></div>
-                                            </div>
-                                        <img class="img-fluid" src="assets/img/netflix.png" alt="netflix行銷手法" />
-                                    </div>
-                                        <center>
-                                        <a class=expedu_icon href="file:///Users/sunyuqing/Downloads/NETFLIX.pdf">netflix行銷手法</a>
-                                        </center>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="portfolio-item mx-auto">
-                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                            <div class="portfolio-item-caption-content text-center text-white"></div>
-                                        </div>
-                                        <img class="img-fluid" src="assets/img/22.png" alt="世新大學影音作品縮圖" />
-                                    </div>
-                                    <center>
-                                        <a class=expedu_icon href="https://youtu.be/AUoUinoRZGE" target="_blank">沒有名字的地方MV</a>
-                                    </center>
-                                </div>
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                            <div class="portfolio-item-caption-content text-center text-white"></div>
-                                        </div>
-                                    <img class="img-fluid" src="assets/img/截圖 2025-11-17 21.06.21.png" alt="數位內容策展" />
-                                </div>
-                                    <center>
-                                    <a class=expedu_icon href="file:///Users/sunyuqing/Downloads/第六組_Over The Bridge_數位內容策展期末報告.pdf">數位內容策展</a>
-                                    </center>
-                            </div>
-                            <h3 class="mb-4 mt-5 text-start">側拍作品</h3>
-                            <div class="horizontal-scroll-container">
-                                
-                                <div class="side-shot-item">
-                                    <img src="assets/img/1.JPG" alt="側拍照片 1">
-                                </div>
-                                <div class="side-shot-item">
-                                    <img src="assets/img/2.JPG" alt="側拍照片 2">
-                                </div>
-                                <div class="side-shot-item">
-                                    <img src="assets/img/4.JPG" alt="側拍照片 4">
-                                </div>
-                                <div class="side-shot-item">
-                                    <img src="assets/img/5.JPG" alt="側拍照片 5">
-                                </div>
-                                <div class="side-shot-item">
-                                    <img src="assets/img/6.JPG" alt="側拍照片 6">
-                                </div>
-                                </div>
-                            </div> 
-                            </div> </div> </div> </section>
-                                               
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+
+            <section id="skills" class="section-block">
+                <h2 class="section-title">專業技能</h2>
+                <div class="skill-tool-box">
+                    <div class="skill-tag">Premiere Pro</div>
+                    <div class="skill-tag">Photoshop</div>
+                    <div class="skill-tag">Illustrator</div>
+                    <div class="skill-tag">Figma</div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section-block">
+                <h2 class="section-title">作品集</h2>
+
+                <div class="portfolio-sub-title">影音作品</div>
+                <div class="portfolio-container">
+                    <a href="https://youtu.be/h07bRzBGvRo" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">VIDEO</span> 2024 世界 12 強棒球賽精華剪輯</div>
+                    </a>
+                    <a href="https://youtu.be/3EUr62l3WQY" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">VIDEO</span> 「沒有名字的地方」MV 剪輯</div>
+                    </a>
+                    <a href="https://youtu.be/xms-XtkZdKg" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">VIDEO</span> 「被代辦清單綁架的24小時」動畫剪輯</div>
+                    </a>
+                    <a href="https://youtu.be/UetQUvWWt4g" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">VIDEO</span> 質性資料分析訪談影片剪輯</div>
+                    </a>
+                </div>
+
+                <div class="portfolio-sub-title">平面作品</div>
+                <div class="design-card-grid">
+                    <div class="design-image-card">
+                        <img src="assets/img/A112070070孫于晴psd.jpg" alt="Design 1" class="design-card-img" onerror="this.src='https://via.placeholder.com/400x400?text=Design+1';">
+                    </div>
+                    <div class="design-image-card">
+                        <img src="assets/img/9.png" alt="Design 2" class="design-card-img" onerror="this.src='https://via.placeholder.com/400x400?text=Design+2';">
+                    </div>
+                    <div class="design-image-card">
+                        <img src="assets/img/L7-操作-2 拷貝.png" alt="Design 3" class="design-card-img" onerror="this.src='https://via.placeholder.com/400x400?text=Design+3';">
+                    </div>
+                </div>
+
+                <div class="portfolio-sub-title">專案企劃</div>
+                <div class="portfolio-container">
+                    <a href="assets/img/光影之舟＿期末報告.pdf" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">PLANNING</span> 光影之舟 _ 企劃書</div>
+                    </a>
+                    <a href="assets/img/Over The Bridge＿數位內容策展專案 (1).pdf" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">PLANNING</span> Over The Bridge _ 數位內容策展專案</div>
+                    </a>
+                    <a href="assets/img/Haru＿產品需求文件.pdf" target="_blank" class="portfolio-list-item">
+                        <div class="work-title"><span class="work-category">PLANNING</span> Haru _ 產品需求文件</div>
+                    </a>
+                </div>
+
+                <div class="portfolio-sub-title">側拍作品</div>
+                <div class="behind-scenes-grid">
+                    <div class="design-image-card">
+                        <img src="assets/img/1.JPG" alt="側拍 1" class="bts-img">
+                    </div>
+                    <div class="design-image-card">
+                        <img src="assets/img/2.JPG" alt="側拍 2" class="bts-img">
+                    </div>
+                    <div class="design-image-card">
+                        <img src="assets/img/3.JPG" alt="側拍 3" class="bts-img">
+                    </div>
+                    <div class="design-image-card">
+                        <img src="assets/img/4.JPG" alt="側拍 4" class="bts-img">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
